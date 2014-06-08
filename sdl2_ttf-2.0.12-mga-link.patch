@@ -1,0 +1,25 @@
+Index: SDL2_ttf-2.0.12/Makefile.am
+===================================================================
+--- SDL2_ttf-2.0.12/Makefile.am
++++ SDL2_ttf-2.0.12/Makefile.am	2013-09-02 09:30:54.333594016 +0200
+@@ -35,6 +35,7 @@
+ 	-release $(LT_RELEASE)	\
+ 	-version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE)
+ endif
++libSDL2_ttf_la_LIBADD = -lm
+ 
+ pkgconfigdir = $(libdir)/pkgconfig
+ pkgconfig_DATA = SDL2_ttf.pc
+Index: SDL2_ttf-2.0.12/Makefile.in
+===================================================================
+--- SDL2_ttf-2.0.12/Makefile.in
++++ SDL2_ttf-2.0.12/Makefile.in	2013-09-02 09:31:16.616426049 +0200
+@@ -107,7 +107,7 @@
+ am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(pkgconfigdir)" \
+ 	"$(DESTDIR)$(libSDL2_ttfincludedir)"
+ LTLIBRARIES = $(lib_LTLIBRARIES)
+-libSDL2_ttf_la_LIBADD =
++libSDL2_ttf_la_LIBADD = -lm
+ am_libSDL2_ttf_la_OBJECTS = SDL_ttf.lo
+ libSDL2_ttf_la_OBJECTS = $(am_libSDL2_ttf_la_OBJECTS)
+ AM_V_lt = $(am__v_lt_@AM_V@)
