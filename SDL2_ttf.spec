@@ -12,7 +12,7 @@ Group:		System/Libraries
 Url:		http://www.libsdl.org/projects/SDL_ttf/
 Source0:	http://www.libsdl.org/projects/SDL_ttf/release/%{name}-%{version}.tar.gz
 Patch0:		sdl2_ttf-2.0.12-mga-link.patch
-BuildRequires:	pkgconfig(sdl2)
+BuildRequires:	pkgconfig(sdl2) >= 2.0.3
 BuildRequires:	pkgconfig(freetype2)
 
 %description
