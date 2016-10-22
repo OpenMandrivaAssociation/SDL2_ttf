@@ -6,13 +6,13 @@
 
 Summary:	Simple DirectMedia Layer 2 - Sample TrueType Font Library
 Name:		SDL2_ttf
-Version:	2.0.12
-Release:	6
+Version:	2.0.14
+Release:	1
 License:	Zlib
 Group:		System/Libraries
 Url:		http://www.libsdl.org/projects/SDL_ttf/
 Source0:	http://www.libsdl.org/projects/SDL_ttf/release/%{name}-%{version}.tar.gz
-Patch0:		sdl2_ttf-2.0.12-mga-link.patch
+#Patch0:		sdl2_ttf-2.0.12-mga-link.patch
 BuildRequires:	pkgconfig(sdl2)
 BuildRequires:	pkgconfig(freetype2)
 
@@ -55,10 +55,10 @@ applications which will use %{name}.
 
 %prep
 %setup -q
-%patch0 -p1
+%apply_patches
 
 %build
-%configure2_5x --disable-static
+%configure --disable-static
 %make
 
 %install
