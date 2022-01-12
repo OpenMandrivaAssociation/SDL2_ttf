@@ -2,12 +2,13 @@
 %define api 2.0
 %define libname %mklibname %{name} %{api} %{major}
 %define devname %mklibname %{name} -d
-%define _disable_lto 1
+%global _disable_rebuild_configure 1
+#define _disable_lto 1
 
 Summary:	Simple DirectMedia Layer 2 - Sample TrueType Font Library
 Name:		SDL2_ttf
-Version:	2.0.15
-Release:	2
+Version:	2.0.18
+Release:	1
 License:	Zlib
 Group:		System/Libraries
 Url:		http://www.libsdl.org/projects/SDL_ttf/
@@ -54,13 +55,15 @@ applications which will use %{name}.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
+%configure \
+	--enable-freetype \
+	--disable-freetype-builtin \
+	--enable-harfbuzz \
+	--disable-harfbuzz-builtin
 
 %build
-%configure --disable-static
-%make
+%make_build
 
 %install
-%makeinstall_std
-
+%make_install
