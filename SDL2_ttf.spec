@@ -7,7 +7,7 @@
 
 Summary:	Simple DirectMedia Layer 2 - Sample TrueType Font Library
 Name:		SDL2_ttf
-Version:	2.20.0
+Version:	2.20.1
 Release:	1
 License:	Zlib
 Group:		System/Libraries
