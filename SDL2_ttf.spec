@@ -1,13 +1,14 @@
 %define major 0
 %define api 2.0
-%define libname %mklibname %{name} %{api} %{major}
+%define libname %mklibname %{name}
+%define oldlibname %mklibname %{name} 2.0 0
 %define devname %mklibname %{name} -d
 %global _disable_rebuild_configure 1
 #define _disable_lto 1
 
 Summary:	Simple DirectMedia Layer 2 - Sample TrueType Font Library
 Name:		SDL2_ttf
-Version:	2.20.2
+Version:	2.22.0
 Release:	1
 License:	Zlib
 Group:		System/Libraries
@@ -26,6 +27,7 @@ applications.
 %package -n %{libname}
 Summary:	Main library for %{name}
 Group:		System/Libraries
+%rename %{oldlibname}
 
 %description -n %{libname}
 This package contains the library needed to run programs dynamically
