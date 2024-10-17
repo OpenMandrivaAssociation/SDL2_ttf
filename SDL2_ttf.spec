@@ -12,7 +12,7 @@ Version:	2.22.0
 Release:	1
 License:	Zlib
 Group:		System/Libraries
-Url:		http://www.libsdl.org/projects/SDL_ttf/
+Url:		https://www.libsdl.org/projects/SDL_ttf/
 Source0:	https://github.com/libsdl-org/SDL_ttf/releases/download/release-%{version}/SDL2_ttf-%{version}.tar.gz
 #Patch0:		sdl2_ttf-2.0.12-mga-link.patch
 BuildRequires:	pkgconfig(sdl2)
