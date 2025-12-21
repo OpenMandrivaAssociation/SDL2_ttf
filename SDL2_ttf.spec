@@ -15,6 +15,11 @@ Group:		System/Libraries
 Url:		https://www.libsdl.org/projects/SDL_ttf/
 Source0:	https://github.com/libsdl-org/SDL_ttf/releases/download/release-%{version}/SDL2_ttf-%{version}.tar.gz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(sdl2)
 BuildRequires:	pkgconfig(freetype2)
 
